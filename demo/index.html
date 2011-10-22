@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+	<head>
+		<meta charset="utf-8" />
+	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE7" />
+		
+		<title> Awesome Demo </title>
+
+		<!-- Meta tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Ivan Grishin" />
+		<meta name="description" content="Awetector.js Demo Page" />
+		<meta name="keywords" content="" />
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="style.css" />
+		
+		<!-- 	Awetector ипользуется для включения HTML5 элементов в IE и поэтому обзятельно должен находиться в теге <head>.
+				Остальные скрипты лучше распологать перед закрывающимся тегом </body> -->
+		<script src="../awetector.js"></script>
+	</head>
+
+	<!--	Use <body> as container
+			More info: http://camendesign.com/code/developpeurs_sans_frontieres	-->
+	<body>
+		<noscript>
+			 For full functionality of this site it is necessary to enable JavaScript.
+			 Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+			 instructions how to enable JavaScript in your web browser</a>.
+		</noscript>
+		
+		<header>
+			<h1> Большой заголовок ;) </h1>
+		</header>
+		<div id="main" role="main" class="clearfix"> 
+			<h3> Результаты в: </h3>
+			<ul>
+				<li id="ds">Safari / Mobile Safari / Chrome</li>
+				<li id="df">Firefox</li>
+				<li id="do">Opera</li>
+				<li id="di9">IE 9</li>
+				<li id="di8">IE 8</li>
+				<li id="di7">IE 7</li>
+				<li id="di6">IE 6</li>
+				<li id="di83">все версии младше IE 8 <br /> будут выделены бордюром</li>
+			</ul>
+<style id="result" contenteditable>	
+	.webkit h1 { background: #0099d6; }
+	.mozilla h1 { background: #e29200; }
+	.opera h1 { background: red; }
+	.ie9 h1 { background-color: #4a62a9; }
+	.ie8 h1 { background: teal; }	
+	.ie7 h1 { background: purple; }
+	.ie6 h1 { background: royalblue; }
+	/* Все версии младше IE 8 */
+	.lt-ie8 h1 {border-bottom: 5px solid #97e8a2;}
+</style>
+		</div>
+		<footer>
+			By <a href="http://johngrish.in">johngrish.in</a>
+		</footer>
+		
+		<!-- Scripts -->
+		<!-- end of Scripts -->
+	</body>
+</html>
