@@ -1,5 +1,5 @@
 /*
-    Awesome Browser Detector
+    Awesome Bro(wser) CSS Detector
     Copyright   Ivan Grishin
     License     MIT / http://bit.ly/mit-license
     Version     0.2
