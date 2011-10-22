@@ -1,4 +1,4 @@
-# Bro.js - Awesome Bro(wiser) CSS Detector
+# Bro.js - Awesome Bro(wser) CSS Detector
 Этот клёвый скрипт автоматически определит браузер и создаст для него класс в теге `<html>`.
 
 Например этот код: 
