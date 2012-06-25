@@ -2,21 +2,15 @@
     Awesome Bro(wser) CSS Detector
     Copyright   Ivan Grishin
     License     MIT / http://bit.ly/mit-license
-    Version     0.2
+    Version     0.2.1
 
-**	 Inspired/Used code by HeadJS (http://headjs.com) & jQuery (http://jquery.com)
+**	 Inspired by HeadJS (http://headjs.com) & jQuery (http://jquery.com)
 **/
 (function(doc) {
 	var html = doc.documentElement,
 		 cclass = [];
 	
 	function pushClass(name) { cclass[cclass.length] = name; }
-	
-	function each(arr, fn) {
-		for (var i = 0, arr_length = arr.length; i < arr_length; i++) {
-			fn.call(arr, arr[i], i);
-		}
-	}	
     
 	var ua = navigator.userAgent.toLowerCase();
     
@@ -42,11 +36,6 @@
 		for (var ver = 3; ver < 11; ver++) {
 		   if (parseFloat(ua[2]) < ver) { pushClass("lt-ie" + ver); }
 		}
-		
-		// HTML5 support
-		each("abbr|article|aside|audio|canvas|details|figcaption|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|time|video".split("|"), function(el) {
-										   doc.createElement(el);
-										});
 	}
 	
 	html.className += ' ' + cclass.join(' ');
