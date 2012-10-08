@@ -13,13 +13,29 @@
 	function pushClass(name) { cclass[cclass.length] = name; }
     
 	var ua = navigator.userAgent.toLowerCase();
+	
+	var ismobile= ua.match(/(ipad)|(iphone)|(ipod)|(android)|(webos)/i)
     
 	ua = /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
         /(opera)(?:.*version)?[ \/]([\w.]+)/.exec( ua ) ||
+	ua = /(iphone|ipod|ipad)/.exec(ua) ||
+		/(android)/.exec(ua) ||
         /(msie) ([\w.]+)/.exec( ua ) ||
         !/compatible/.test( ua ) && /(mozilla)(?:.*? rv:([\w.]+))?/.exec( ua ) ||
         ['','other', '0']; 
         
+    if (ua[1] == 'ipad') {
+		pushClass('webkit');
+    } else if (ua[1] == 'ipod' || ua[1] == 'iphone') {
+		ua[1] = 'iphone';
+		pushClass('webkit');
+    } 
+    
+    if (ismobile) {
+    	pushClass('mobile');
+    } else if (!ismobile) {
+    	pushClass('desktop');
+    }
 		
 	if (ua[1] == 'msie') {
 			ua[1] = 'ie';
